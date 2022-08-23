@@ -1,0 +1,28 @@
+.header {
+
+}
+.header .container {
+
+}
+
+.main .main_slider figure {
+    width: 1900px;
+    height: 750px;
+}
+
+.main_visual .main_slider .itm01 {
+    background: url(../img/main01.jpg)no-repeat center center/cover ;
+}
+.main_visual .main_slider .itm02 {
+    background: url(../img/main02.jpg)no-repeat center center/cover ;
+}
+.main_visual .main_slider .itm03 {
+    background: url(../img/main03.jpg)no-repeat center center/cover ;
+}
+.main_visual .main_slider .itm04 {
+    background: url(../img/main04.jpg)no-repeat center center/cover ;
+}
+.main_visual .main_slider .itm05 {
+    background: url(../img/main05.jpg)no-repeat center center/cover ;
+}
+
