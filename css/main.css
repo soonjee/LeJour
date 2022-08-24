@@ -1,18 +1,71 @@
+* { outline: 1px solid #--f00;}
+.Wrap {
+    max-width: 1900px;
+    width: 100%;
+    margin: 0 auto;
+    font-family:'AvenirNextLTPro';
+    font-size: 17px;
+    font-weight: 400;
+}
+
+
+/* header */
 .header {
     position: fixed;
-    min-width: 1200px;
-    width: 100%;
-    height: 90px;
-    top: 20px;
+    top: 0;
     left: 0;
+    width: 100%;
+    padding: 20px 0 0 0;
+    z-index: 999;
 }
-.header .container {
 
+.header .container { 
+    max-width: 1700px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px 50px;
+    background: #fff;
+}
+
+.header .header_mb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .Gnb {
+
+}
+
+.header .Gnb ul {
+    display: flex;
+    gap: 30px;
+}
+.header .Gnb ul a {
+    display: block;
+}
+
+.header .rbox_ngb {
+    display: flex;
+    gap: 30px;
+}
+
+.header .rbox_ngb li>a{
+    display: block;
+}
+
+
+/* main sc: main_visual */
+.main_visual {
+    position: relative;
+    width: 100%;
 }
 
 .main .main_slider figure {
-    width: 1900px;
-    height: 750px;
+    max-width: 1900px;
+    width: 100%;
+    max-height: 949px;
+    height: 100vh;
 }
 
 .main_visual .main_slider .itm01 {
@@ -30,4 +83,58 @@
 .main_visual .main_slider .itm05 {
     background: url(../img/main05.jpg)no-repeat center center/cover ;
 }
+
+/* main_visual act */
+.main_visual .main_act {
+    max-width: 1700px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main_visual .main_act .wheel{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    z-index: 2;
+}
+
+.main_act .wheel span {
+    font-size: 0;
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    width: 3px;
+    height: 6px;
+    background: #fff;
+    border-radius: 2px;
+    animation: wheel 1.5s infinite;
+    z-index: 2;
+}
+
+@keyframes wheel {
+    to {
+        top: 13px;
+    }
+}
+
+.main_visual .act_txt {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    font-weight: 300;
+    white-space: nowrap;
+justify-content: center;
+    color: #fff;
+    z-index: 999;
+}
+
+
 
