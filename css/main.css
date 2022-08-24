@@ -4,10 +4,13 @@
     width: 100%;
     margin: 0 auto;
     font-family:'AvenirNextLTPro';
-    font-size: 17px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
-
+body {
+    background: #f0e7db;
+}
 
 /* header */
 .header {
@@ -31,10 +34,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header .Gnb {
-
+    font-size: 15px;
 }
 
 .header .Gnb ul {
@@ -48,6 +48,21 @@
 .header .rbox_ngb {
     display: flex;
     gap: 30px;
+    font-size: 13px;
+}
+
+.header .rbox_ngb li {
+    position: relative;
+}
+
+.header .rbox_ngb li~li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 1px;
+    height: 13px;
+    background: #555;
 }
 
 .header .rbox_ngb li>a{
@@ -134,6 +149,17 @@
 justify-content: center;
     color: #fff;
     z-index: 999;
+}
+
+/* main_coupon*/
+.coupon {
+    padding: 50px 0;
+}
+
+.coupon .inner {
+    max-width: 1700px;
+    width: 100%;
+    margin: 0 auto;;
 }
 
 
