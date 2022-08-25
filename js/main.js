@@ -12,6 +12,11 @@ window.addEventListener('DOMContentLoaded', () => {
             clickable: false,
         },
     })
+})
 
+$(function () {
+    $('.sele_slider').slick({
+
+    })
 })
 
