@@ -1,4 +1,4 @@
-* { outline: 1px solid #f00;}
+* { outline: 1px solid #--f00;}
 .Wrap {
     max-width: 1900px;
     width: 100%;
@@ -153,14 +153,94 @@ body {
 
 /* main_coupon*/
 .coupon {
-    padding: 50px 0;
+    padding: 80px 0;
+    letter-spacing: -0.028em;
 }
 
 .coupon .inner {
+    display: flex;
     max-width: 1700px;
     width: 100%;
     margin: 0 auto;
+    justify-content: center;
 }
+
+.coupon .cbox {
+    display: flex;
+    padding: 50px 0;
+    text-align: center;
+    background: #fff;
+}
+
+
+.coupon .cbox>a {
+    width: 380px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.coupon .cbox:hover {
+    background: #53513D;
+    transition: 0.6s;
+    color: #fff;
+}
+
+.coupon .con01 { position: relative;}
+.coupon .con01::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 30px;
+    background: #d7d7d7;
+    width: 1px;
+    height: 60%;
+}
+.coupon .con02 { position: relative;}
+.coupon .con02::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 30px;
+    background: #d7d7d7;
+    width: 1px;
+    height: 60%;
+}
+
+
+.coupon .cbox .en-p {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.coupon .cbox .ko-p  {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* sele_box, hover 시 바로구매 박스 - box_link */
+
+.box_img .box_link { 
+    position: absolute;
+    left: 50px;
+    height: 100%;
+    font-size: 17px;
+    transition: 0.5s;
+}
+
+.box_img:hover .box_link{
+    transform: translateY(-60px);
+}
+
+.box_img .box_link i { display: inline-block; font-size: 23px; }
+.box_img .box_link a:nth-child(1) {
+    padding: 5px 25px;
+    border: 1px solid #53513d;
+}
+
+
 
 
 /* selection */
@@ -218,7 +298,7 @@ body {
 .sele_slider .box_img>a{
     display: block;
     width: 308px;
-    height: 320px;
+    height: 357px;
     background: #bab7a4;
 }
 
