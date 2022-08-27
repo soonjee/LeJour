@@ -16,7 +16,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 $(function () {
     $('.sele_slider').slick({
-
+        slidesToShow: 5,
+        dots: false,
+        arrows:false,
+        // centerMode: true,
     })
 })
 

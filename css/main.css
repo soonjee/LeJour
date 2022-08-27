@@ -1,4 +1,4 @@
-* { outline: 1px solid #--f00;}
+* { outline: 1px solid #f00;}
 
 /* 공통 */
 .Wrap {
@@ -226,7 +226,7 @@ body {
 
 /* selection 섹션 */
 .selection { padding: 50px 50px; text-align: center; }
-.selection .inner { display: block; }
+.selection .inner { position: relative; display: block; }
 
 .selection .sele_title {
     display: block;
@@ -264,43 +264,22 @@ body {
 }
 
 
-/* --바로구매 버튼 */
-.sele_pdbox .pb_bottom { 
-    position: absolute;
-    left: 50px;
-    /* height: 100%; */
-    font-size: 17px;
-    transition: 0.3s;
-    opacity: 0;
-}
-.sele_pdbox:hover .pb_bottom{ 
-    transform: translateY(-50px);
-    opacity: 1;
-}
-
-.sele_pdbox .pb_bottom i { display: inline-block; font-size: 23px; }
-.sele_pdbox .pb_bottom a:nth-child(1) {
-    padding: 5px 25px;
-    border: 1px solid #53513d;
-}
-
-/* --슬라이드 */
-.selection .sele_content {
-    display: flex;
-    padding: 50px 0;
-}
-
-.selection .sele_content li>div {
-    display: flex;
-    gap: 30px;
-}
-
+/* --sele_content 슬라이드 */
+.selection .sele_content { padding: 50px 0; }
 .sele_content .sele_pdbox>a{
     display: block;
     width: 308px;
     height: 357px;
     background: #bab7a4;
 }
+
+.sele_content .sele_pdbox>.bg2{
+    display: block;
+    width: 308px;
+    height: 357px;
+    background: #d2c3a1;
+}
+
 
 .sele_content .sele_pdbox{
     position: relative;
@@ -333,6 +312,31 @@ body {
     padding: 5px 5px;
 }
 
+/* --바로구매 버튼 hover */
+.sele_pdbox .pb_bottom { 
+    position: absolute;
+    left: 25px;
+    letter-spacing: -0.028em;
+    /* text-align: center;  버튼 글 중앙정렬 하기*/
+    transition: 0.3s;
+    opacity: 0;
+    color: #53513dcb;
+}
+.sele_pdbox:hover .pb_bottom{ 
+    transform: translateY(-60px);
+    opacity: 1;
+}
+
+.sele_pdbox .pb_bottom i { display: inline-block; padding: 8px; font-size: 25px; }
+.sele_pdbox .pb_bottom a:nth-child(1) {
+    display: inline-block;
+    font-size: 15px;
+    padding: 0 30px;
+    border: 1px solid #53513d;
+}
+
+
+/* --가격박스 */
 .sele_slider .sele_prbox {
     display: block;
     width: 308px;
@@ -342,12 +346,10 @@ body {
 }
 
 .sele_slider .prbox_tit { margin-bottom: 20px;}
-
 .sele_slider .prbox_tit strong{
     display: block;
     font-size: 15px;
     color: #53513d;
-    
 }
 
 .sele_slider .prbox_tit strong>p {
@@ -366,6 +368,29 @@ body {
     color: #53513d;
 }
 
+
+/* 슬라이드 버튼 */
+
+.selection .sele_arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 39px;
+}
+
+.selection .sele_arrows i:nth-child(1) {
+    margin: 0 0 0 -500px;
+}
+.selection .sele_arrows i:nth-child(2) {
+    margin: 0 0 0 500px;
+}
+
+
+
+
+
+/* 더보기 버튼 */
 .selection .sele_btn>a{
     display: inline-block;
     padding: 20px 40px;
