@@ -21,5 +21,12 @@ $(function () {
         arrows:false,
         // centerMode: true,
     })
+
+    $('.sele_content .sele_arrows i:nth-child(1)').on('click', function () {
+        $('.sele_slider').slick('slickPrev')
+    });
+    $('.sele_content .sele_arrows i:nth-child(2)').on('click', function () {
+        $('.sele_slider').slick('slickNext')
+    });
 })
 

@@ -1,4 +1,4 @@
-* { outline: 1px solid #f00;}
+* { outline: 1px solid #--f00;}
 
 /* 공통 */
 .Wrap {
@@ -228,6 +228,7 @@ body {
 .selection { padding: 50px 50px; text-align: center; }
 .selection .inner { position: relative; display: block; }
 
+/* --selection : 타이틀 */
 .selection .sele_title {
     display: block;
     margin-bottom: 45px;
@@ -235,6 +236,7 @@ body {
     font-weight: 400;
 }
 
+/* --selection : 탭메뉴 */
 .selection .sele_tab {
     display: flex;
     margin: 35px 0 0 0;   
@@ -264,8 +266,38 @@ body {
 }
 
 
-/* --sele_content 슬라이드 */
+/* --selection : 슬라이드 */
 .selection .sele_content { padding: 50px 0; }
+
+.sele_content .sele_slider {
+    position: relative;
+}
+
+/* --sele_arrows: 슬라이드 버튼 */
+.sele_content .sele_arrows i {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #666633;
+    /* background: rgba(0, 0, 0, 0.5); */
+    padding: 10px 10px;
+}
+
+.sele_content .sele_arrows i:nth-child(1) {
+    margin: 0 0 0 -880px;
+}
+
+.sele_content .sele_arrows i:nth-child(2) {
+    margin: 0 0 0 880px;
+}
+
+
+
+
+/* --sele_product : 제품 이미지 구역 */
 .sele_content .sele_pdbox>a{
     display: block;
     width: 308px;
@@ -312,31 +344,58 @@ body {
     padding: 5px 5px;
 }
 
-/* --바로구매 버튼 hover */
+/* --sele_pdbox : 바로구매 버튼, hover */
 .sele_pdbox .pb_bottom { 
     position: absolute;
-    left: 25px;
-    letter-spacing: -0.028em;
-    /* text-align: center;  버튼 글 중앙정렬 하기*/
+    display: inline-block;
+    top: 100%;
+    left: 0;
+    width: 308px;
     transition: 0.3s;
     opacity: 0;
-    color: #53513dcb;
+
+    font-size: 27px;
+    font-weight: 100;
+    letter-spacing: -0.028em;
+    color: #53513daa;
 }
 .sele_pdbox:hover .pb_bottom{ 
     transform: translateY(-60px);
     opacity: 1;
 }
 
-.sele_pdbox .pb_bottom i { display: inline-block; padding: 8px; font-size: 25px; }
-.sele_pdbox .pb_bottom a:nth-child(1) {
+.sele_pdbox .pb_bottom>i { 
     display: inline-block;
-    font-size: 15px;
-    padding: 0 30px;
+    padding-right: 10px;
+}
+.sele_pdbox .pb_bottom a:nth-child(1) {
+    padding: 10px 45px;
+    margin-right: 10px;
     border: 1px solid #53513d;
+    /* vertical-align: top; */
+    color: #53513d;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 100;
 }
 
 
-/* --가격박스 */
+.sele_pdbox .pb_bottom a:nth-child(1):hover {
+    padding: 10px 45px;
+    margin-right: 10px;
+    border: 1px solid #53513d;
+    /* vertical-align: top; */
+    color: #fff;
+    background: #53513d;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 100;
+    transition: 1s;
+}
+
+
+
+/* --sele_prbox: 가격박스 */
 .sele_slider .sele_prbox {
     display: block;
     width: 308px;
@@ -367,27 +426,6 @@ body {
     font-weight: 700;
     color: #53513d;
 }
-
-
-/* 슬라이드 버튼 */
-
-.selection .sele_arrows {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 39px;
-}
-
-.selection .sele_arrows i:nth-child(1) {
-    margin: 0 0 0 -500px;
-}
-.selection .sele_arrows i:nth-child(2) {
-    margin: 0 0 0 500px;
-}
-
-
-
 
 
 /* 더보기 버튼 */
