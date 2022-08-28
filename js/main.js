@@ -15,12 +15,24 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 $(function () {
+    $('.sele_tab>li>a').on('click', function (e) {
+        e.preventDefault();
+        //console.log($(this).parent().index());
+        var idx = $(this).parent().index();
+        $('.sele_content>li').removeClass('on');
+        $('.sele_content>li').eq(idx).addClass('on');
+        $('.sele_tab>li').removeClass('on');
+        $(this).parent().addClass('on');
+    });
+
     $('.sele_slider').slick({
         slidesToShow: 5,
         dots: false,
         arrows:false,
         // centerMode: true,
     })
+
+
 
     $('.sele_content .sele_arrows i:nth-child(1)').on('click', function () {
         $('.sele_slider').slick('slickPrev')
